@@ -1,0 +1,36 @@
+/*  91.461 Assignment: Creating Your First Webpage
+    Name: Elick Coval
+    Email address: elick_coval@student.uml.edu
+    Affiliation: Senior computer science student in GUI Programming I at Umass Lowell
+    File Updated: 9/19/19
+    Description: CSS file including all of the style elements except picture dimensions.
+*/
+body {
+  background-color:LightBlue;
+}
+
+/* Main header */
+h1 {
+  color: ForestGreen;
+  text-align: center;
+  font-size: 30pt;
+  text-decoration-line: underline;
+}
+
+/* Cat pic */
+h2 {
+  float:right;
+}
+
+/* Sub Headers */
+h3 {
+  font-size: 20pt;
+}
+
+/* Non-List text */
+p {
+  color:brown;
+  float:center;
+  font-size: 12pt;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
