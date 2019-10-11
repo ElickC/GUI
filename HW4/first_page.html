@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--91.461 Assignment: Assignment No. 4 Styling Your First Web Page With CSS
+    Name: Elick Coval
+    Email address: elick_coval@student.uml.edu
+    Affiliation: Senior computer science student in GUI Programming I at Umass Lowell
+    File Updated: 10/9/19
+    Description of my webpage: I redesigned my page with the same structure as the
+    previous assignment. Added a secondary page for the assignment zip files as well
+    as added a bit more personal information. Also added visually interesting pictures
+    to spruce it up.
+
+    I used the HTML5 Living Validator (http://validator.nu/) and
+    W3C CSS Validation Service: http://jigsaw.w3.org/css-validator
+    for validation.
+
+    Copyright (c) 2019 by Elick Coval. All rights reserved. May be
+    freely copied or excerpted for educational purposes with credit to the
+    author.
+  -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Elick Coval's Website</title>
+        <!--CSS file-->
+        <link rel="stylesheet" href="css/mystyle.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Javascript file-->
+        <script src="myscript.js"> </script>
+    </head>
+
+    <body>
+      <div id="wrapper">
+        <header>
+          <!-- Main header -->
+          <h1>Elick's GUI Webpage</h1>
+        </header>
+
+        <!-- Nav Bar -->
+        <nav>
+            <ul>
+                <li><a href="first_page.html">Home</a>
+                </li>
+                <li><a href="assignments.html">Assignments</a>
+                </li>
+                <li><a href="pics/syllabus.pdf">Syllabus</a>
+                </li>
+                <li><a href="pics/grade_weights.jpg">Grade Weights</a>
+            </ul>
+        </nav>
+
+        <!-- Main page content -->
+        <div id="content">
+            <h2>Elick Coval</h2>
+            <img src="pics/dog.jpg" alt="Luna">
+            <p>Computer Science Student<br>
+               University of Massachusettes Lowell<br>
+               Graduating May 2020</p>
+            <span class="section_header">Interests</span>
+            <ul>
+                <li>Building/Creating with code</li>
+                <li>Traveling</li>
+                <li>Watching and listening to high fidelity movies/music</li>
+                <li>Walking</li>
+                <li>Reading</li>
+            </ul>
+            <div id="contact">
+                <span class="section_header">Wishlist of Skills</span>
+                <br>
+                <ol>
+                    <li>Javascript</li>
+                    <li>Bootstrap</li>
+                    <li>Angular/React</li>
+                </ol>
+                <br>
+            </div>
+        </div>
+
+        <!-- Footer with contact info/validator icons-->
+        <footer>
+            A picture of my dog Luna and I at a beach near Portland, ME.
+            <br>
+            <br>
+            Copyright &copy; 2019 Elick Coval
+            <br>
+            <a href="mailto:Elick_Coval@student.uml.edu">Elick_Coval@student.uml.edu</a>
+            <br>
+            <p> <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="Valid CSS!" />
+                </a>
+            </p>
+            <p><a href="http://jigsaw.w3.org/css-validator/check/referer">
+               <img style="border:0;width:88px;height:31px"
+               src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+               alt="Valid CSS!" />
+               </a>
+            </p>
+        </footer>
+      </div>
+    </body>
+</html>
