@@ -1,13 +1,9 @@
-/*  91.461 Assignment: Assignment No. 4 Styling Your First Web Page With CSS
+/*  91.461 Assignment: Assignment No. 6 Creating an Interactive Dynamic Table
     Name: Elick Coval
     Email address: elick_coval@student.uml.edu
     Affiliation: Senior computer science student in GUI Programming I at Umass Lowell
-    File Updated: 10/9/19
-    Description of my webpage: CSS file holding all styling.
-
-    I used the HTML5 Living Validator (http://validator.nu/) and
-    W3C CSS Validation Service: http://jigsaw.w3.org/css-validator
-    for validation.
+    File Updated: 11/14/19
+    Description of file: CSS file holding all styling.
 
     Copyright (c) 2019 by Elick Coval. All rights reserved. May be
     freely copied or excerpted for educational purposes with credit to the
@@ -96,8 +92,8 @@ span.section_header {
   text-decoration: underline;
 }
 
+/* Main content of the page */
 #content {
-
   grid-row: 2/3;
   grid-column: 2/4;
   padding-right: 20px;
@@ -116,6 +112,7 @@ div#content img{
   margin-bottom: 5px;
 }
 
+/* Form attributes */
 #dataEntry {
   max-width: 350px;
   padding-top: 10px;
@@ -127,6 +124,7 @@ input:invalid {
   border: 3px solid red;
 }
 
+/* Table attributes */
 #table {
   margin:auto;
   display:none;
@@ -135,12 +133,27 @@ input:invalid {
   grid-column: 2/4;
 }
 
+/* Error message attributes */
+div#error {
+  visibility: hidden;
+  font-size: 18pt;
+  font-weight: bold;
+  color: #cc0000;
+}
+
 h2 {
   color: #034f84;
 }
 
+h3 {
+  font-size: 28pt;
+  text-decoration: underline;;
+  text-decoration-style: double;
+}
+
 h1,
-h2 {
+h2,
+h3 {
   font-family: Georgia, "Times New Roman", serif;
 }
 

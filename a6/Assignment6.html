@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+    <!-- 91.461 Assignment: Assignment No. 6 Creating an Interactive Dynamic Table
+    Name: Elick Coval
+    Email address: elick_coval@student.uml.edu
+    Affiliation: Senior computer science student in GUI Programming I at Umass Lowell
+    File Updated: 11/14/19
+    Description of file: HTML file where the structure of the page is decalred
+    as well as any elements.
+
+    Copyright (c) 2019 by Elick Coval. All rights reserved. May be
+    freely copied or excerpted for educational purposes with credit to the
+    author.  -->
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -17,6 +29,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="../js/scriptForA6.js"> </script>
     </head>
+
     <body>
       <div id="wrapper">
         <header>
@@ -24,96 +37,97 @@
           <h1>Elick's GUI Webpage</h1>
         </header>
 
-      <!-- Nav Bar -->
+        <!-- Nav Bar -->
         <nav>
-            <ul>
-                <li><a href="../index.html">Home</a>
-                </li>
-                <li><a href="../assignments.html">Assignments</a>
-                </li>
-                <li><a href="../pics/syllabus.pdf">Syllabus</a>
-                </li>
-                <li><a href="../pics/grade_weights.jpg">Grade Weights</a>
-            </ul>
+          <ul>
+            <li><a href="../index.html">Home</a>
+            </li>
+            <li><a href="../assignments.html">Assignments</a>
+            </li>
+            <li><a href="../pics/syllabus.pdf">Syllabus</a>
+            </li>
+            <li><a href="../pics/grade_weights.jpg">Grade Weights</a>
+          </ul>
         </nav>
 
-        <!-- Main page content -->
-        <div id="content">
-          <div id="dataEntry">
+          <!-- Main page content -->
+          <div id="content">
+            <br>
+            <h3> Multiplication Table </h3>
+
+            <!-- Form div -->
+            <div id="dataEntry">
+
+              <!-- First set of inputs -->
               <div class="form-group">
-                <label for="xMinMax">Enter horizontal bounding numbers (multipliers) min and max below:</label>
-                <input type="number" class="form-control" id="xMin" placeholder="Enter Min Integer" >
+                <label for="xMinMax">Enter horizontal bounding numbers (multipliers) min and max below: (Fractional numbers will be highlighted in red a rounded)</label>
+                <input type="number" class="form-control" id="xMin" placeholder="Enter Min Integer">
                 <small id="xHelpBlock" class="form-text text-muted">
-                  The integer above must be less than the integer below
+                  The integer above must be less than the integer below: (Warning: if the range is large it may take a while to compute)
                 </small>
                 <input type="number" class="form-control" id="xMax" placeholder="Enter Max Integer">
-
               </div>
+
+              <!-- Second set of inputs -->
               <div class="form-group">
                 <label for="yMinMax">Enter vertical bounding numbers (multiplicands) min and max below:</label>
                 <input type="number" class="form-control" id="yMin" placeholder="Enter Min Integer">
                 <small id="yHelpBlock" class="form-text text-muted">
-                  The integer above must be less than the integer below
+                  The integer above must be less than the integer below: (Warning: if the range is large it may take a while to compute)
                 </small>
                 <input type="number" class="form-control" id="yMax" placeholder="Enter Max Integer">
               </div>
+
+              <!-- Button -->
               <button type="submit" class="btn btn-primary" id="submit">Create Table</button>
+
+              <!-- Error message for table -->
+              <div id="error">
+                <br>
+                <p>Table Creation Unsuccessful</p>
+              </div>
+
+            </div>
+
+            <!-- Table div -->
+            <div id="table">
+              <table class="table table-bordered table-dark" id="myTable">
+                <thead>
+                  <!-- To be added later by js -->
+                </thead>
+                <tbody>
+                  <!-- To be added later by js -->
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div id="table">
-            <table class="table table-bordered table-dark" id="myTable">
-              <thead>
-
-              </thead>
-              <tbody>
-                <!-- <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr> -->
-        </tbody>
-      </table>
-
-
-    </div>
-  </div>
-
         <!-- Footer with contact info/validator icons-->
-        <footer>
+          <footer>
             <br>
             Copyright &copy; 2019 Elick Coval
             <br>
             <a href="mailto:Elick_Coval@student.uml.edu">Elick_Coval@student.uml.edu</a>
             <br>
             <p> <a href="http://jigsaw.w3.org/css-validator/check/referer">
-                <img style="border:0;width:88px;height:31px"
-                src="http://jigsaw.w3.org/css-validator/images/vcss"
-                alt="Valid CSS!" />
-                </a>
-            </p>
-            <p><a href="http://jigsaw.w3.org/css-validator/check/referer">
-               <img style="border:0;width:88px;height:31px"
-               src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-               alt="Valid CSS!" />
+              <img style="border:0;width:88px;height:31px"
+              src="http://jigsaw.w3.org/css-validator/images/vcss"
+              alt="Valid CSS!" />
                </a>
             </p>
-        </footer>
-        </div>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    </body>
+            <p><a href="http://jigsaw.w3.org/css-validator/check/referer">
+              <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!" />
+               </a>
+            </p>
+          </footer>
+
+      <!-- Wrapper end div -->
+      </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
 </html>
