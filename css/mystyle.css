@@ -2,12 +2,14 @@
     Name: Elick Coval
     Email address: elick_coval@student.uml.edu
     Affiliation: Senior computer science student in GUI Programming I at Umass Lowell
-    File Updated: 11/14/19
+    File Updated: 12/1/19
     Description of file: CSS file holding all styling.
 
     Copyright (c) 2019 by Elick Coval. All rights reserved. May be
     freely copied or excerpted for educational purposes with credit to the
     author. */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 header, nav, footer {
   display: grid;
@@ -72,7 +74,7 @@ nav a:hover {
 }
 
 header {
-  grid-column: 1 / 4;
+  grid-column: 1 / 6;
 }
 
 /* Navy Blue*/
@@ -95,8 +97,9 @@ span.section_header {
 /* Main content of the page */
 #content {
   grid-row: 2/3;
-  grid-column: 2/4;
+  grid-column: 2/5;
   padding-right: 20px;
+  min-width: 800px;
 }
 
 div#content ul{
@@ -114,20 +117,29 @@ div#content img{
 
 /* Form attributes */
 #dataEntry {
-  max-width: 350px;
+  max-width: 450px;
   padding-top: 10px;
   grid-row: 2/2;
   grid-column: 2/4;
 }
 
-input:invalid {
-  border: 3px solid red;
+.formHeader {
+  max-width: fit-content;
+}
+
+.subHead {
+  font-size: 10pt;
+}
+
+fieldset {
+  grid-column: 2/5;
+  min-width: 800px;
 }
 
 /* Table attributes */
 #table {
-  margin:auto;
-  display:none;
+  margin: auto;
+  display: block;
   padding-top: 20px;
   grid-row: 3/3;
   grid-column: 2/4;
@@ -139,6 +151,22 @@ div#error {
   font-size: 18pt;
   font-weight: bold;
   color: #cc0000;
+}
+
+/* Inputform attributes */
+#inputForm label.error {
+		margin-left: 10px;
+		width: auto;
+		display: inline;
+    color: red;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+input.error {
+  border-color: red;
+  border-style: solid;
+  border-width: 3px;
 }
 
 h2 {
