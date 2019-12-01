@@ -9,8 +9,6 @@
     freely copied or excerpted for educational purposes with credit to the
     author. */
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
 header, nav, footer {
   display: grid;
 }
@@ -154,13 +152,13 @@ div#error {
 }
 
 /* Inputform attributes */
-#inputForm label.error {
-		margin-left: 10px;
-		width: auto;
-		display: inline;
-    color: red;
-    font-size: 14pt;
-    font-weight: bold;
+label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+  color: red;
+  font-size: 14pt;
+  font-weight: bold;
 }
 
 input.error {
@@ -202,7 +200,6 @@ div#cat img{
   width: 500px;
   height: 400px;
 }
-
 
 /* Re-style the footer */
 footer {
