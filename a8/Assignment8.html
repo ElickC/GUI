@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+    <!-- 91.461 Assignment: Assignment No. 8 Using the jQuery UI Slider and Tab Widgets
+    Name: Elick Coval
+    Email address: elick_coval@student.uml.edu
+    Affiliation: Senior computer science student in GUI Programming I at Umass Lowell
+    File Updated: 12/8/19
+    Description of file: HTML file where the structure of the page is decalred
+    as well as any elements.
+
+    Had to rework some of the structure to get things where I wanted them for this assignment.
+    I changed some elements being aligned via col/row in css to leveraging
+    bootstrap's col/rows.
+
+    Copyright (c) 2019 by Elick Coval. All rights reserved. May be
+    freely copied or excerpted for educational purposes with credit to the
+    author.  -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Multiplcation Table</title>
+
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- External CSS -->
+        <link rel="stylesheet" href="../css/mystyle.css">
+        <link rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+        <link rel="stylesheet" href="../js/jquery-ui/jquery-ui.theme.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Javascript file-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.js"></script>
+        <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+        <script src="../js/scriptForA8.js"> </script>
+
+    </head>
+
+    <body>
+      <div id="wrapper">
+        <header>
+          <!-- Main header -->
+          <h1>Elick's GUI Webpage</h1>
+        </header>
+
+        <!-- Nav Bar -->
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a>
+            </li>
+            <li><a href="../assignments.html">Assignments</a>
+            </li>
+            <li><a href="../pics/syllabus.pdf">Syllabus</a>
+            </li>
+            <li><a href="../pics/grade_weights.jpg">Grade Weights</a>
+          </ul>
+        </nav>
+
+          <!-- Main page content -->
+          <div id="content">
+            <div class="row align-items-center">
+            <div class="col-md-6">
+            <br>
+            <h3> Multiplication Table </h3>
+            <p class="formHeader">Enter horizontal bounding numbers (multipliers) min and max below: (Fractional numbers will be rounded)</p>
+          </div>
+          </div> <!-- row end -->
+
+
+          <div class="row">
+            <!-- Form div -->
+            <div class="col-md-12 align-items-center">
+             <div id="dataEntry">
+              <form class="cmxform" id="inputForm" method="get" action="">
+              <fieldset>
+              <p class ="subHead">Values must be between -55 and 55.</p>
+              <p>
+              <!-- Input box -->
+              <label for="xMin">Min Column Value:</label>
+              <input id="xMin" name="xMin" type="text" placeholder="Enter Min Integer">
+              </p>
+              <!-- Slider -->
+              <div id="xMinSlider"></div><br>
+              <p>
+                <!-- Input box -->
+              <label for="xMax">Max Column Value:</label>
+              <input id="xMax" name="xMax" type="text" placeholder="Enter Max Integer">
+              </p>
+              <!-- Slider -->
+              <div id="xMaxSlider"></div><br>
+              <p>
+                <!-- Input box -->
+              <label for="yMin">Min Row Value:</label>
+              <input id="yMin" name="yMin" type="text" placeholder="Enter Min Integer">
+              </p>
+              <!-- Slider -->
+              <div id="yMinSlider"></div><br>
+              <p>
+                <!-- Input box -->
+              <label for="yMax">Max Row Value:</label>
+              <input id="yMax" name="yMax" type="text" placeholder="Enter Max Integer">
+              </p>
+              <!-- Slider -->
+              <div id="yMaxSlider"></div><br>
+
+              <!-- Buttons -->
+              <input class="btn btn-primary" type="submit" id="saveTable" value="Save Table">
+              <input class="btn btn-danger" type="submit" id="deleteTabs" value="Delete Saved Tables">
+
+            </div> <!-- dataEntry end -->
+
+            <!-- Table div -->
+            <div class="col-md-4">
+             <div id="table">
+               <!-- Table to be inserted here -->
+             </div>
+            </div>
+
+          <!-- Error message for table -->
+            <div id="error" name="error">
+             <br>
+             <p>Table Creation Unsuccessful</p>
+           </div>
+
+            <!-- Saved Tables messaging -->
+            <div class="tabLabel"><h3>Saved Tables</h3></div>
+            <p class ="subHead">You may save up to 6 tables</p>
+            <p>
+
+            <!-- Saved Tables div -->
+            <div id="tabs">
+              <ul>
+               <!-- Saved tables to be inserted here -->
+              </ul>
+            </div>
+
+          </div><!-- col end -->
+        </div> <!-- row end -->
+
+        <br><br>              <!-- Adding line breaks to make the display nicer. -->
+
+        <!-- Footer with contact info/validator icons-->
+          <footer>
+            <br>
+            Copyright &copy; 2019 Elick Coval
+            <br>
+            <a href="mailto:Elick_Coval@student.uml.edu">Elick_Coval@student.uml.edu</a>
+            <br>
+            <p> <a href="http://jigsaw.w3.org/css-validator/check/referer">
+              <img style="border:0;width:88px;height:31px"
+              src="http://jigsaw.w3.org/css-validator/images/vcss"
+              alt="Valid CSS!" />
+               </a>
+            </p>
+            <p><a href="http://jigsaw.w3.org/css-validator/check/referer">
+              <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!" />
+               </a>
+            </p>
+          </footer>
+
+      <!-- Wrapper end div -->
+
+         </div>  <!-- content div end -->
+       </div>  <!-- wrapper div end -->
+
+<!-- jQuery and Validation plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.js"></script>
+<script src="../js/jquery-ui/jquery-ui.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>
