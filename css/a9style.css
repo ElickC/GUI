@@ -1,0 +1,150 @@
+/*  91.461 Assignment: Assignment No. 9 Implementing a Bit of Scrabble with Drag-and-Drop
+    Name: Elick Coval
+    Email address: elick_coval@student.uml.edu
+    Affiliation: Senior computer science student in GUI Programming I at Umass Lowell
+    File Updated: 12/20/19
+    Description of file: CSS file holding all styling.
+
+    Copyright (c) 2019 by Elick Coval. All rights reserved. May be
+    freely copied or excerpted for educational purposes with credit to the
+    author. */
+
+@import url('https://fonts.googleapis.com/css?family=Cherry Cream Soda');
+
+header, nav, footer {
+  display: grid;
+}
+
+/* Set the background image */
+body {
+  background-image: url(../pics/green_pond.jpg);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Set the display to grid to get everything to line up correctly with correct
+    dimensions */
+#wrapper {
+  margin: auto;
+  width: 80%;
+  /* min-width: 850px; */
+  min-width: fit-content;
+  display: grid;
+  grid-row: 2/4;
+  grid-column-gap: 25px;
+  background-color: #b7d7e8;
+}
+
+/* Navbar with background image that adjusts correctly */
+nav {
+  min-width: 300px;
+  margin:0;
+  padding-right: 10px;
+  grid-row: 2/6;
+  grid-column: 1/2;
+  background-image: url(../pics/sunset4.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 100% 100%;
+}
+
+/* Get rid of the list dots */
+nav ul {
+  font-size: 1.2em;
+  list-style-type: none;
+}
+
+/* Re-style navbar links */
+nav a{
+  text-decoration: none;
+  text-align: left;
+  font-weight: bold;
+  color: black;
+  margin-left: 0;
+  font-size: 155%;
+}
+
+/* Pink */
+nav a:visited {
+  color: #d64161;
+}
+
+nav a:hover {
+  color: white;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  background-color: #034f84;
+  color: white;
+}
+
+header {
+  grid-column: 1 / 6;
+}
+
+h3 {
+  font-family: 'Cherry Cream Soda', sans-serif;
+  font-size: 65px;
+}
+
+p {
+  text-align: center;
+}
+
+/* size and center tile rack */
+#tileRack {
+  background-image: url("../images/scrabble/rack2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 700px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* score and buttons */
+#scoreBoard{
+  align: center;
+  border: 2px solid #73AD21;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+/* get score and label to appear together on the scoreboard */
+.label{
+  text-align: right;
+}
+
+/* get score and label to appear together on the scoreboard */
+#score{
+  text-align: left;
+}
+
+.tile {
+  border-style: solid;
+  border-color: white;
+  float: left;
+}
+
+#board {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* error msg to display when out of tiles */
+#err {
+  display: none;
+  font-family: 'Cherry Cream Soda', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  color: red;
+}
+
+footer {
+  font-size: 10pt;
+}

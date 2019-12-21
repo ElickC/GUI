@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+    <!-- 91.461 Assignment: Assignment No. 9 Implementing a Bit of Scrabble with Drag-and-Drop
+    Name: Elick Coval
+    Email address: elick_coval@student.uml.edu
+    Affiliation: Senior computer science student in GUI Programming I at Umass Lowell
+    File Updated: 12/20/19
+    Description of file: HTML file where the structure of the page is decalred
+    as well as elements.
+
+    I again used mostly bootstrap to structure the page.
+
+    Copyright (c) 2019 by Elick Coval. All rights reserved. May be
+    freely copied or excerpted for educational purposes with credit to the
+    author.  -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Scrabble</title>
+
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- External CSS -->
+        <link rel="stylesheet" href="../css/a9style.css">
+        <link rel="stylesheet" href="../js/jquery-ui/jquery-ui.min.css">
+        <!-- <link rel="stylesheet" href="../js/jquery-ui/jquery-ui.theme.min.css"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body>
+      <div id="wrapper">
+        <header>
+          <!-- Main header -->
+          <h1>Elick's GUI Webpage</h1>
+        </header>
+
+        <!-- Nav Bar -->
+        <nav>
+          <ul>
+            <li><a href="../index.html">Home</a>
+            </li>
+            <li><a href="../assignments.html">Assignments</a>
+            </li>
+            <li><a href="../pics/syllabus.pdf">Syllabus</a>
+            </li>
+            <li><a href="../pics/grade_weights.jpg">Grade Weights</a>
+          </ul>
+        </nav>
+
+        <!-- Main page content -->
+        <div id="content">
+          <div class="row">
+          <div class="col-md-12">
+          <br>
+          <h3 align="center"> Scrabble </h3>
+          <p class="formHeader">You may play as many words as you would like until all of the letter tiles run out. Words are not checked in this version.</p>
+          </div>
+          </div> <!-- row end -->
+
+
+          <!-- letter rack div  -->
+          <div id="tileRack"></div>
+
+          <!-- Error message for table -->
+          <div id="err" name="error">
+             <br>
+             <p>You ran out of tiles! Please start a new game.</p>
+          </div>
+
+          <!-- buttons and score -->
+          <div id="scoreBoard">
+
+          <div class="row">
+          <div class="col-md-3 align-items-center">
+          <input class="btn btn-primary" type="submit" id="playWord" value="Play Word">
+          </div>
+
+          <div class="col-md-3 align-items-center">
+          <div class="label">Score:</div>
+          </div>
+
+          <div class="col-md-3 align-items-center">
+          <div id="score">0</div>
+          </div>
+
+          <div class="col-md-3 align-items-center">
+          <input class="btn btn-danger" type="submit" id="resetGame" value="Start New Game">
+          </div>
+
+          <!-- row end -->
+          </div>
+          <!-- score board end -->
+          </div>
+
+          <br><br>
+
+          <div class="row">
+          <div id="board"></div>
+          <!-- row end -->
+          </div>
+
+
+          <!-- Adding line breaks to improve appearance. -->
+          <br><br>
+
+          <!-- Footer with contact info-->
+          <div class="row">
+            <footer>
+              <br>
+              Copyright &copy; 2019 Elick Coval
+              <br>
+              <a href="mailto:Elick_Coval@student.uml.edu">Elick_Coval@student.uml.edu</a>
+              <br>
+            </footer>
+          </div> <!-- row end -->
+
+        </div>  <!-- content div end -->
+
+      </div>  <!-- wrapper div end -->
+
+      <!-- jQuery and Validation plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+      <script src="../js/scriptForA9.js"> </script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
