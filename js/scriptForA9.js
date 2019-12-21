@@ -176,7 +176,7 @@ $(document).ready(function(){
       var rack = [];
       var remainingTiles = [];
 
-      // Collect all of the remaining tiles and add them to the temp array
+      // Collect all of the remaining tile letters and add them to the temp array
       for (var key in scrabbleTiles) {
         var remaining = scrabbleTiles[key]["number-remaining"];
         for (var i = 0; i < remaining; ++i) {
@@ -285,12 +285,12 @@ $(document).ready(function(){
     // button clicks
     $("#resetGame").click(function(){
       clearRack();
-      //resetMasterTiles();
+      resetMasterTiles();
       addTilesToRack();
       score = 0;
       displayScore();
-      // $("#playWord").attr("disabled", false);
-      // $("#err").hide();
+      $("#playWord").attr("disabled", false);
+      $("#err").hide();
     });
 
     $("#playWord").click(function(){
