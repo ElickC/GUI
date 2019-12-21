@@ -146,8 +146,6 @@ $(document).ready(function(){
           out: function(ev, ui) {
             scrabbleBoard[this.getAttribute("tile")].letter = "";
             scrabbleBoard[this.getAttribute("tile")].tileId = 0;
-            // $("#tileRack").append(ui.draggable);
-            // ui.draggable.css({"position": "relative", "top": "", "left": ""});
             (ui.draggable).detach().appendTo("#tileRack").css({top: 50});
           }
         });
