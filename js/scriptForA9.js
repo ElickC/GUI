@@ -27,6 +27,7 @@ http://yongcho.github.io/GUI-Programming-1/assignment9.html#
 https://stackoverflow.com/questions/1254665/jquery-draggable-droppable-how-to-snap-dropped-element-to-dropped-on-element
 https://stackoverflow.com/questions/5562853/jquery-ui-get-id-of-droppable-element-when-dropped-an-item
 https://stackoverflow.com/questions/38502010/get-attribute-id-of-a-div-element-thats-being-dragged-with-jquery
+https://stackoverflow.com/questions/5735270/revert-a-jquery-draggable-object-back-to-its-original-container-on-out-event-of
 
 */
 
@@ -121,7 +122,6 @@ $(document).ready(function(){
   function createBoard() {
     var image;
     var newTile;
-    $("#tileRack").droppable({});
 
     // add each board tile with correct sizing and dropping characteristics
     for (i = 0; i < boardLength; i++) {
@@ -146,6 +146,9 @@ $(document).ready(function(){
           out: function(ev, ui) {
             scrabbleBoard[this.getAttribute("tile")].letter = "";
             scrabbleBoard[this.getAttribute("tile")].tileId = 0;
+            // $("#tileRack").append(ui.draggable);
+            // ui.draggable.css({"position": "relative", "top": "", "left": ""});
+            (ui.draggable).detach().appendTo("#tileRack").css({top: 50});
           }
         });
       }
@@ -176,7 +179,7 @@ $(document).ready(function(){
       var rack = [];
       var remainingTiles = [];
 
-      // Collect all of the remaining tile letters and add them to the temp array
+      // Collect all of the remaining tile words and add them to the temp array
       for (var key in scrabbleTiles) {
         var remaining = scrabbleTiles[key]["number-remaining"];
         for (var i = 0; i < remaining; ++i) {
@@ -235,6 +238,12 @@ $(document).ready(function(){
 
       // get needed number of tiles and insert/style them correctly
       rack = getNewTiles(7 - numTilesOnRack());
+      $("#tileRack").droppable({
+        drop: function(event, ui) {
+            ui.draggable.draggable("option", "revert", true);
+        }
+      });
+
       for (i = 0; i < rack.length; ++i) {
         key = rack[i];
         tileId = getId();
@@ -243,13 +252,27 @@ $(document).ready(function(){
         // Add tile image.
         $("#tileRack").append(newTile);
 
+
         // Make the tile draggable.
         newTile.draggable({
           snap: ".tile",
           stack: ".tile",
           snapMode: "inner",
-          snapTolerance: 40,
-          refreshPositions: true
+          snapTolerance: 35,
+          refreshPositions: true,
+          revertDuration: 300,
+          revert : function(event, ui) {
+
+            // send tile back to the rack if taken off board
+            $(this).data("uiDraggable").originalPosition = {
+                top : 50,
+                left : 0
+            };
+            // return boolean
+            return !event;
+            // that evaluate like this:
+            // return event !== false ? false : true;
+        }
         });
       }
     }
